@@ -1,9 +1,5 @@
-import axios from "axios"
-import { createSlice,PayloadAction,createAsyncThunk  } from "@reduxjs/toolkit"
+import { createSlice  } from "@reduxjs/toolkit"
 import { GridRowParams } from "@mui/x-data-grid"
-// import { Todo,Inputs } from "../../Interfaces/typeRow"
-
-
 
 const modalSlice=createSlice({    
     name:'modalState',
@@ -21,7 +17,7 @@ const modalSlice=createSlice({
       dialogModalToogleReducer:(state)=>{
 
             state.openDialog=!state.openDialog;
-            // console.log(state.open);
+      
           },
       getRowParam:(state,actions)=>{
 

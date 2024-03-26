@@ -1,14 +1,11 @@
-import * as React from 'react';
 import Backdrop from '@mui/material/Backdrop';
 import Box from '@mui/material/Box';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import FormModal from './form';
 import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../store';
-import { Todo } from '../../Interfaces/typeRow';
 import { modalToogleReducer } from '../../Features/helper/modalReducer';
 import { IconButton } from '@mui/material';
 import CloseIcon from '@mui/icons-material/Close';
@@ -27,20 +24,11 @@ const style = {
   p: 4,
 };
 
- const TransitionsModal=(props: any) =>{
-    // console.log(props.modalOptions);
+ const TransitionsModal=() =>{
+
     const dispatch=useDispatch<AppDispatch>()
-    const modalState=useSelector((state:RootState)=>state.fetching.modalState)
     const open1=useSelector((state:RootState)=>state.modalReducer.openModal)
-    // console.log(rows);
-    
-//   const [open, setOpen] = React.useState(false);
-  const handleOpen = () =>{ 
-    // console.log(open);
-    
-    // setOpen(props.modalOptions)
-    // console.log(open);
-  };
+
   const handleClose = () =>{ 
      dispatch(modalToogleReducer())
 };

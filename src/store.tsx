@@ -8,8 +8,6 @@ const store = configureStore({
     fetching: fetchData,
     modalReducer:modalReducer,
     fetchDetails:fetchDetails
-    // rowUpdate:rowSlice
-    // You can add more reducers here if needed
   },
 });
 
