@@ -158,7 +158,7 @@ const TodoList: React.FC = () => {
         initialState={{
           pagination: {
             paginationModel: {
-              pageSize: 10,
+              pageSize: 5,
             },
           },
         }}
