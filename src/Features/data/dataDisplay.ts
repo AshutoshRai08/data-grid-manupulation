@@ -50,6 +50,9 @@ const fetchJsonReducer = createSlice({
                 console.log(state.cardVal);
                 state.status = "showAll";
                 debugger
+        },
+        setFocus:(state)=>{
+                state.suggestions=state.allData
         }
   },
  
@@ -67,5 +70,5 @@ const fetchJsonReducer = createSlice({
     
   },
 });
-export const { fetchAutocomplete,setValue,setCardValue } = fetchJsonReducer.actions;
+export const { fetchAutocomplete,setValue,setCardValue,setFocus } = fetchJsonReducer.actions;
 export default fetchJsonReducer.reducer;
