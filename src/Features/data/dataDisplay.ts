@@ -32,9 +32,11 @@ const fetchJsonReducer = createSlice({
        
             // let suggestions1=JSON.parse(JSON.stringify(state.suggestions));
             if(action.payload !==''){
-               state.suggestions=state.allData.filter((suggestion:any) => suggestion.includes(action.payload));}
-               else
+               state.suggestions=state.allData.filter((suggestion:any) => suggestion.toLowerCase().includes(action.payload));}
+               else{
                state.suggestions=[]
+               state.status='succeeded'
+               }
                debugger
         },
         setValue:(state,action)=>{
