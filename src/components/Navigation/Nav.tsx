@@ -5,6 +5,7 @@ const NavLinks=()=>{
 return(
     <Box>
     <Button href="/">Grid</Button>
+    <Button href="/autoCompleteHandler">New Grid</Button>
     <Button href="/tabGrid" variant="contained">Tab</Button>
 
 </Box>

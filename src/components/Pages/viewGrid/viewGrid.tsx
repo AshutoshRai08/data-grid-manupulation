@@ -141,9 +141,9 @@ const TodoList: React.FC = () => {
 
   useEffect(() => {
     if (status === "idle") {
-      debugger;
+      // debugger;
       dispatch(fetchTodos());
-      debugger;
+      // debugger;
     }
   }, [dispatch, status]);
 
