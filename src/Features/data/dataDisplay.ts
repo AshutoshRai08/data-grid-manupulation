@@ -31,10 +31,11 @@ const fetchJsonReducer = createSlice({
         fetchAutocomplete:(state,action:PayloadAction<string>)=>{
        
             // let suggestions1=JSON.parse(JSON.stringify(state.suggestions));
+            let filterCheck=action.payload.toLowerCase()
             if(action.payload !==''){
-               state.suggestions=state.allData.filter((suggestion:any) => suggestion.toLowerCase().includes(action.payload));}
+               state.suggestions=state.allData.filter((suggestion:any) => suggestion.toLowerCase().includes(filterCheck));}
                else{
-               state.suggestions=[]
+                state.suggestions=[]
                state.status='succeeded'
                }
                debugger
