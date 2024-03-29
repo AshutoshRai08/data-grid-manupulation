@@ -49,6 +49,7 @@ const fetchJsonReducer = createSlice({
                 state.cardVal=action.payload
                 console.log(state.cardVal);
                 state.status = "showAll";
+                state.value=action.payload;
                 debugger
         },
         setFocus:(state)=>{

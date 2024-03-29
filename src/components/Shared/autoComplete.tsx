@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { fetchJSON,fetchAutocomplete ,setValue,setCardValue,setFocus} from '../../Features/data/dataDisplay';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store';
+import SearchIcon from '@mui/icons-material/Search';
+import "./searchStyle.css"
 import "./trasnform.css"
 // import { createPortal } from 'react-dom';
 
@@ -28,6 +30,7 @@ val=val;
   };
   const setData=(event:any)=>{
     dispatch(setCardValue(event))
+    // val=event.target.value;
     setShowCSS(true);
     // debugger
   }
@@ -39,14 +42,16 @@ val=val;
 // let content= 
 // const elemnt=document.getElementById("search-Input") as HTMLElement
 
-  return <div><input size={50} style={{marginTop:'100px'}} className={showCSS ? 'search-input input-up' : 'search-input'} type="text" value={val} onChange={handleInputChange} onFocus={setSuggestion}/>
-  
+  return <div><div className={showCSS ? 'search-input input-up input-field input-icons' : 'search-input input-field input-icons'} ><i className="fa fa-search icon"></i><input size={80} className='input-field' type="text" value={val} onChange={handleInputChange} onFocus={setSuggestion}/>
+  </div>
   <ul style={{marginTop:'10px'}}>
-
+ 
   {suggestions.map((suggestion) => (
+    <div>
     <li key={suggestion} onClick={()=>setData(suggestion)}>
     {suggestion}
   </li>
+  </div>
   ))}
 </ul>
 </div>
