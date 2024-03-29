@@ -1,0 +1,6 @@
+/* Input animation */
+.input-up {
+    transform: translateY(-500%);
+    transition: transform 0.8s ease-in-out;
+  }
+  

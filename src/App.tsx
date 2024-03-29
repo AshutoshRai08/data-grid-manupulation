@@ -4,7 +4,9 @@ import NavLinks from './components/Navigation/Nav';
 import DataGridDemo from './components/Pages/viewGrid/viewGrid';
 import TabGrid from './components/Pages/viewTabGrid/TabGrid';
 import MediaCard from './components/Pages/Helper/user-detailed-page';
-import ViewComplete from './components/Pages/autCompleteData/autoCompleteData';
+import ViewComplete from './components/Pages/autCompleteData/autoCompleteData'
+// import SearchBar from './components/Shared/searchBar';
+// import SearchUI from './components/Shared/tranformation'
 
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
     <Route path='/tabGrid' element={<TabGrid/>}/>
     <Route path='/userInfo/:id' element={<MediaCard/>}/>
     <Route path='/autoCompleteHandler' element={<ViewComplete/>}/>
+    {/* <Route path='/searchUI' element={<SearchUI/>}/> */}
     <Route path='*' element={<Navigate to='/'/>}/>
     </Routes>
     </main>

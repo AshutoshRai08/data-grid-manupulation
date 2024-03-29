@@ -16,7 +16,8 @@ const ConditionalRender=()=> {
     case 'showAll':
         return(
 <React.Fragment>
-        <Autocomplete/>
+        <Autocomplete />
+        <br/>
             <ProdDetail />
             </React.Fragment>
         )
