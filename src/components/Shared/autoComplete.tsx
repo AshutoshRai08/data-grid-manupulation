@@ -23,22 +23,23 @@ val=val;
     
         dispatch(setValue(event.target.value))
         dispatch(fetchAutocomplete(event.target.value))
-        
+        setShowCSS(event.target.value !== '');
    
   };
   const setData=(event:any)=>{
     dispatch(setCardValue(event))
-    setShowCSS(event !== '');
+    setShowCSS(true);
     // debugger
   }
   const setSuggestion=()=>{
      dispatch(setFocus())
+    //  setShowCSS(true);
     
   }
 // let content= 
 // const elemnt=document.getElementById("search-Input") as HTMLElement
 
-  return <div className={showCSS ? 'search-input input-up' : 'search-input'} ><input size={50} style={{marginTop:'100px'}} type="text" value={val} onChange={handleInputChange} onFocus={setSuggestion}/>
+  return <div><input size={50} style={{marginTop:'100px'}} className={showCSS ? 'search-input input-up' : 'search-input'} type="text" value={val} onChange={handleInputChange} onFocus={setSuggestion}/>
   
   <ul style={{marginTop:'10px'}}>
 
